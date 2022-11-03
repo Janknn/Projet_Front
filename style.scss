@@ -4,12 +4,20 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     background-color: #101211;
     
     header {
         width: 100%;
         height: 50px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
         
         nav {
             height: 50px;
@@ -35,6 +43,35 @@ body {
                     list-style-type: none;
                     color: white;
                     font-size: 20px;
+                }
+            }
+        }
+    }
+
+    main {
+        height: 100vh;
+
+        .container {
+            width: 100vh;
+            height: 100vw;
+            transform: rotate(-90deg) translateX(-100vh);
+            transform-origin: top left;
+            overflow-x: hidden;
+        
+            .horizontalBlock {
+                display: flex;
+                flex-direction: row;
+                width: 400vw;
+                transform: rotate(90deg) translateY(-100vh);
+                transform-origin: top left;
+    
+                .page {
+                    width: 100vw;
+                    height: 100vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 100px;
                 }
             }
         }
