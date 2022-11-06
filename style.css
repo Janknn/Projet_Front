@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -64,6 +65,7 @@ body main .container {
   transform: rotate(-90deg) translateX(-100vh);
   transform-origin: top left;
   overflow-x: hidden;
+  scroll-snap-type: y mandatory;
 }
 body main .container .horizontalBlock {
   display: flex;
@@ -78,6 +80,7 @@ body main .container .horizontalBlock .page {
   display: flex;
   justify-content: center;
   align-items: center;
+  scroll-snap-align: center;
 }
 body main .container .horizontalBlock .page .cercle {
   height: 40px;
@@ -119,19 +122,22 @@ body main .container .horizontalBlock .page .end_line {
   margin-top: 700px;
   position: absolute;
 }
-body main .container .horizontalBlock .presentation h1 {
+body main .container .horizontalBlock .presentation .content h1 {
   color: white;
+  font-size: 60px;
   font-family: "Roboto Mono", monospace;
   font-weight: 500;
 }
-body main .container .horizontalBlock .presentation h2 {
+body main .container .horizontalBlock .presentation .content h2 {
   color: white;
   font-family: "Roboto Mono", monospace;
+  font-size: 50px;
   font-weight: 300;
 }
-body main .container .horizontalBlock .presentation h3 {
+body main .container .horizontalBlock .presentation .content h3 {
   color: white;
   font-family: "Roboto Mono", monospace;
+  font-size: px;
   font-weight: 300;
 }
 body main .container .horizontalBlock .presentation .title {
@@ -139,6 +145,13 @@ body main .container .horizontalBlock .presentation .title {
   display: flex;
   justify-content: center;
   margin-top: 800px;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
+  color: white;
+}
+body main .container .horizontalBlock .presentation img {
+  width: 450px;
+  margin-left: 150px;
 }
 body main .container .horizontalBlock .skill .title {
   position: absolute;
@@ -296,6 +309,23 @@ body main .container .horizontalBlock .contact .form_notice h2 {
   color: #222;
   margin: 10px 8px 20px;
   font-size: 25px;
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    display: block;
+    overflow: scroll !important;
+    width: 100vh;
+    height: auto !important;
+    transform: rotate(0) translateX(0) !important;
+    scroll-snap-type: y mandatory;
+  }
+  .horizontalBlock {
+    display: block;
+    width: 400vw;
+    transform: rotate(0) translateY(0) !important;
+    transform-origin: top left;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

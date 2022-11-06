@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior:smooth;
 }
 
 ::-webkit-scrollbar {
@@ -74,6 +75,7 @@ body {
             transform: rotate(-90deg) translateX(-100vh);
             transform-origin: top left;
             overflow-x: hidden;
+            scroll-snap-type: y mandatory;
         
             .horizontalBlock {
                 display: flex;
@@ -88,6 +90,7 @@ body {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    scroll-snap-align: center;
                     
 
                     .cercle { 
@@ -137,29 +140,43 @@ body {
                 }
 
                 .presentation {
-                    h1 {
-                      color: white; 
-                      font-family: 'Roboto Mono', monospace; 
-                      font-weight: 500;
+                    .content {
+                        h1 {
+                            color: white; 
+                            font-size: 60px;
+                            font-family: 'Roboto Mono', monospace; 
+                            font-weight: 500;
+                          }
+      
+                          h2 {
+                              color: white;
+                              font-family: 'Roboto Mono', monospace;
+                              font-size: 50px;
+                              font-weight: 300;
+                          }
+      
+                          h3 {
+                              color: white;
+                              font-family: 'Roboto Mono', monospace;
+                              font-size: px;
+                              font-weight: 300;
+                          }
                     }
-
-                    h2 {
-                        color: white;
-                        font-family: 'Roboto Mono', monospace;
-                        font-weight: 300;
-                    }
-
-                    h3 {
-                        color: white;
-                        font-family: 'Roboto Mono', monospace;
-                        font-weight: 300;
-                    }
+                    
 
                     .title {
                         position: absolute;
                         display: flex;
                         justify-content: center;
                         margin-top: 800px;
+                        font-family: 'Roboto Mono', monospace;
+                        font-weight: 500;
+                        color: white;
+                    }
+                    
+                    img {
+                        width: 450px;
+                        margin-left: 150px;
                     }
                 }
 
@@ -367,3 +384,20 @@ body {
     }
 }
 
+@media screen and (max-width : 850px) {
+    .container {
+        display: block;
+        overflow: scroll !important ;
+        width: 100vh;
+        height: auto !important;
+        transform: rotate(0) translateX(0) !important;
+        scroll-snap-type: y mandatory;
+    }
+
+    .horizontalBlock {
+        display: block;
+        width: 400vw;
+        transform: rotate(0) translateY(0) !important;
+        transform-origin: top left;
+    }
+}
