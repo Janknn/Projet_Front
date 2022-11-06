@@ -122,22 +122,16 @@ body main .container .horizontalBlock .page .end_line {
   margin-top: 700px;
   position: absolute;
 }
-body main .container .horizontalBlock .presentation .content h1 {
+body main .container .horizontalBlock .presentation .content h2 {
   color: white;
   font-size: 60px;
   font-family: "Roboto Mono", monospace;
   font-weight: 500;
 }
-body main .container .horizontalBlock .presentation .content h2 {
-  color: white;
-  font-family: "Roboto Mono", monospace;
-  font-size: 50px;
-  font-weight: 300;
-}
 body main .container .horizontalBlock .presentation .content h3 {
   color: white;
   font-family: "Roboto Mono", monospace;
-  font-size: px;
+  font-size: 35px;
   font-weight: 300;
 }
 body main .container .horizontalBlock .presentation .title {
