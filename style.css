@@ -240,7 +240,7 @@ body main .container .horizontalBlock .contact .social {
   width: 600px;
   padding-right: 50px;
 }
-body main .container .horizontalBlock .contact .social h1 {
+body main .container .horizontalBlock .contact .social h2 {
   color: white;
   font-family: "Roboto Mono", monospace;
   font-weight: 300;
@@ -263,6 +263,7 @@ body main .container .horizontalBlock .contact .form_notice {
 body main .container .horizontalBlock .contact .form_notice h2 {
   font-family: "Roboto Mono", monospace;
   font-weight: 500;
+  color: white;
 }
 body main .container .horizontalBlock .contact .form_notice form label {
   font-size: 18px;
